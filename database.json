@@ -1,0 +1,944 @@
+{
+  "users": [
+    {
+      "id": "user_1792502415773",
+      "name": "Julian Salvador",
+      "email": "julian@gmail.com",
+      "password": "12345",
+      "role": "instructor",
+      "status": "active",
+      "avatar": "JS",
+      "createdCourses": [
+        "course_1792595961625",
+        "course_1792502521530"
+      ],
+      "enrolledCourses": [],
+      "progress": {},
+      "subscription": {
+        "planId": "plan_enterprise",
+        "status": "active",
+        "renewsAt": "2026-12-31"
+      }
+    },
+    {
+      "id": "user_1792595444571",
+      "name": "Julian alumno",
+      "email": "julianalumno@gmail.com",
+      "password": "12345",
+      "role": "student",
+      "status": "active",
+      "avatar": "JA",
+      "createdCourses": [],
+      "enrolledCourses": [
+        "course_1792595961625"
+      ],
+      "progress": {
+        "course_1792595961625": {
+          "completedLessons": [
+            "les_1792596118055"
+          ],
+          "lessonWatchPercentage": {
+            "les_1792596118055": 100
+          },
+          "quizScores": {
+            "quiz_1792595961625": 100
+          },
+          "completedModules": [
+            "mod_1792595961625"
+          ],
+          "certificateIssued": false
+        }
+      },
+      "subscription": {
+        "planId": "plan_basic",
+        "status": "active",
+        "renewsAt": "2026-12-31"
+      }
+    },
+    {
+      "id": "user_1792503353890",
+      "name": "Patapin Acosador de caballo",
+      "email": "patapin@gmail.com",
+      "password": "12345",
+      "role": "student",
+      "status": "active",
+      "avatar": "PA",
+      "createdCourses": [],
+      "enrolledCourses": [
+        "course_webdev"
+      ],
+      "progress": {},
+      "subscription": {
+        "planId": "plan_basic",
+        "status": "active",
+        "renewsAt": "2026-12-31"
+      }
+    },
+    {
+      "id": "user_student",
+      "name": "Carlos Mendoza",
+      "email": "estudiante@dev.com",
+      "password": "123",
+      "role": "student",
+      "avatar": "CM",
+      "enrolledCourses": [
+        "course_webdev",
+        "course_uiux"
+      ],
+      "progress": {
+        "course_webdev": {
+          "completedLessons": [
+            "les_001",
+            "les_002"
+          ],
+          "quizScores": {
+            "quiz_mod1": 100
+          },
+          "certificateIssued": false,
+          "myRating": 5,
+          "myReview": "Excelente curso, muy bien explicado y con material practico."
+        },
+        "course_uiux": {
+          "completedLessons": [],
+          "quizScores": {},
+          "certificateIssued": false,
+          "lessonWatchPercentage": {
+            "les_ui_01": 4
+          }
+        }
+      },
+      "subscription": {
+        "planId": "plan_pro",
+        "status": "active",
+        "renewsAt": "2026-11-05"
+      }
+    },
+    {
+      "id": "user_instructor",
+      "name": "Ing. Mateo Rossi",
+      "email": "admin@dev.com",
+      "password": "123",
+      "role": "instructor",
+      "avatar": "MR",
+      "createdCourses": [
+        "course_webdev",
+        "course_uiux",
+        "course_ai",
+        "course_marketing"
+      ],
+      "enrolledCourses": [
+        "course_webdev",
+        "course_uiux",
+        "course_ai",
+        "course_marketing"
+      ],
+      "progress": {},
+      "subscription": {
+        "planId": "plan_enterprise",
+        "status": "active",
+        "renewsAt": "2027-01-01"
+      }
+    },
+    {
+      "id": "st_1792503194315",
+      "name": "Alejandro Mamamelano",
+      "email": "mamamelo@gmail.com",
+      "password": "123",
+      "role": "student",
+      "status": "active",
+      "avatar": "AM",
+      "createdCourses": [],
+      "enrolledCourses": [
+        "course_1792502521530"
+      ],
+      "progress": {},
+      "subscription": {
+        "planId": "plan_basic",
+        "status": "active",
+        "renewsAt": "2026-12-31"
+      }
+    }
+  ],
+  "activeUserId": "user_student",
+  "courses": [
+    {
+      "id": "course_1792595961625",
+      "title": "Vamos a la casa de gustavo",
+      "category": "Negocios",
+      "level": "Avanzado",
+      "rating": 5,
+      "reviewsCount": 1,
+      "price": 99.99,
+      "instructor": "Julian Salvador",
+      "instructorAvatar": "JS",
+      "instructorBio": "Instructor especialista certificado en el área.",
+      "image": "assets/images/course_gustavo.jpg",
+      "description": "Hagamos feliz a gustavo",
+      "learningGoals": [
+        "Dominio completo de los temas principales del programa"
+      ],
+      "modules": [
+        {
+          "id": "mod_1792595961625",
+          "title": "Módulo 1: Fundamentos y Bienvenida",
+          "lessons": [
+            {
+              "id": "les_1792596118055",
+              "title": "Vamos con todo por nicolas",
+              "duration": "30:00",
+              "videoUrl": "https://www.youtube.com/watch?v=bE2R744-pYI",
+              "fallbackMp4": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+              "resources": []
+            }
+          ],
+          "quiz": {
+            "id": "quiz_1792595961625",
+            "title": "Quiz del Módulo 1",
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q1",
+                "question": "¿Comprendes la estructura general del curso?",
+                "options": [
+                  "Sí, totalmente claro",
+                  "Necesito revisar más",
+                  "Tengo dudas",
+                  "No"
+                ],
+                "correctIndex": 0,
+                "explanation": "Excelente comienzo."
+              },
+              {
+                "id": "q_1792597522616",
+                "question": "Cuantos años tiene gustavo",
+                "options": [
+                  "Opción A (Correcta)",
+                  "Opción B",
+                  "Opción C",
+                  "Opción D"
+                ],
+                "correctIndex": 0,
+                "explanation": "Respuesta verificada por el instructor."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "course_webdev",
+      "title": "Desarrollo Web Fullstack con React y Node.js",
+      "category": "Programación",
+      "level": "Intermedio",
+      "rating": 5,
+      "reviewsCount": 143,
+      "price": 89.99,
+      "instructor": "Ing. Mateo Rossi",
+      "instructorAvatar": "MR",
+      "instructorBio": "Senior Fullstack Engineer con más de 10 años de experiencia en aplicaciones distribuidas.",
+      "image": "assets/images/course_webdev.png",
+      "description": "Aprende a construir aplicaciones web completas y escalables desde cero utilizando React, Node.js, Express y bases de datos relacionales.",
+      "learningGoals": [
+        "Arquitectura moderna Frontend y Backend",
+        "APIs RESTful y autenticación JWT",
+        "Manejo de estado global y optimización de rendimiento",
+        "Despliegue continuo en producción"
+      ],
+      "modules": [
+        {
+          "id": "mod_001",
+          "title": "Módulo 1: Fundamentos y Arquitectura Web",
+          "lessons": [
+            {
+              "id": "les_001",
+              "title": "1. Introducción al ecosistema Fullstack moderno",
+              "duration": "12:45",
+              "videoUrl": "https://www.youtube.com/watch?v=kqtD5dpn9C8",
+              "fallbackMp4": "assets/videos/fullstack_ecosystem.webm",
+              "resources": [
+                {
+                  "id": "res_01",
+                  "name": "Guia_Arquitectura_Fullstack.pdf",
+                  "type": "PDF",
+                  "size": "2.4 MB"
+                },
+                {
+                  "id": "res_02",
+                  "name": "Diagrama_Ecosistema_2026.png",
+                  "type": "IMAGE",
+                  "size": "1.1 MB"
+                }
+              ]
+            },
+            {
+              "id": "les_002",
+              "title": "2. Configuración del Entorno de Desarrollo",
+              "duration": "18:20",
+              "videoUrl": "assets/videos/devtools_environment.webm",
+              "fallbackMp4": "assets/videos/devtools_environment.webm",
+              "resources": [
+                {
+                  "id": "res_03",
+                  "name": "Plantilla_Proyecto_Inicial.zip",
+                  "type": "ZIP",
+                  "size": "5.8 MB"
+                }
+              ]
+            }
+          ],
+          "quiz": {
+            "id": "quiz_mod1",
+            "title": "Evaluación del Módulo 1: Arquitectura y Entorno Web",
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q1",
+                "question": "¿Cuál es la ventaja fundamental de la arquitectura SPA (Single Page Application) en aplicaciones modernas?",
+                "options": [
+                  "Obliga al navegador a recargar el documento HTML completo en cada clic",
+                  "Carga el cascarón base una sola vez y renderiza vistas dinámicamente mediante APIs sin recargas completas",
+                  "Elimina la necesidad de disponer de un servidor o capa de backend",
+                  "Permite ejecutar ensamblador nativo sin pasar por el motor de JavaScript"
+                ],
+                "correctIndex": 1,
+                "explanation": "Las SPAs proporcionan una experiencia fluida tipo aplicación nativa al consumir datos de endpoints REST y actualizar el DOM reactivamente."
+              },
+              {
+                "id": "q2",
+                "question": "En las herramientas de desarrollo (DevTools), ¿para qué se utiliza principalmente el panel Network (Red)?",
+                "options": [
+                  "Para modificar únicamente la tipografía local del sistema operativo",
+                  "Para inspeccionar las solicitudes HTTP/HTTPS, códigos de respuesta, tiempos de latencia y cargas útiles de APIs",
+                  "Para configurar la memoria swap del disco duro",
+                  "Para crear certificados SSL autofirmados"
+                ],
+                "correctIndex": 1,
+                "explanation": "El panel Network permite auditar en tiempo real el tráfico de red, cabeceras, códigos de estado HTTP y desempeño de transferencia de recursos."
+              },
+              {
+                "id": "q3",
+                "question": "¿Qué función desempeñan los Breakpoints (puntos de interrupción) durante la depuración en DevTools?",
+                "options": [
+                  "Pausan la ejecución del código en una línea concreta para examinar variables, el Call Stack y el flujo de ejecución",
+                  "Borran de inmediato el código fuente en el servidor de producción",
+                  "Aumentan la frecuencia de reloj del procesador de la máquina",
+                  "Formatean la base de datos de usuarios"
+                ],
+                "correctIndex": 0,
+                "explanation": "Los breakpoints permiten detener la ejecución en un punto exacto para inspeccionar el estado en memoria y diagnosticar errores paso a paso."
+              },
+              {
+                "id": "q_1792605193575",
+                "question": "Cuantos anos tiene Gustavo?",
+                "options": [
+                  "18 anos",
+                  "25 anos",
+                  "30 anos",
+                  "42 anos"
+                ],
+                "correctIndex": 1,
+                "explanation": "Gustavo tiene 25 anos segun el caso de estudio."
+              }
+            ]
+          }
+        },
+        {
+          "id": "mod_002",
+          "title": "Módulo 2: State Management & APIs",
+          "lessons": [
+            {
+              "id": "les_003",
+              "title": "3. Integración de Servicios Backend y APIs Async",
+              "duration": "22:15",
+              "videoUrl": "assets/videos/apis_async_workers.webm",
+              "fallbackMp4": "assets/videos/apis_async_workers.webm",
+              "resources": [
+                {
+                  "id": "res_04",
+                  "name": "Endpoints_API_Specs.pdf",
+                  "type": "PDF",
+                  "size": "1.8 MB"
+                }
+              ]
+            }
+          ],
+          "quiz": {
+            "id": "quiz_mod2",
+            "title": "Evaluación del Módulo 2: State Management & APIs",
+            "passingScore": 75,
+            "questions": [
+              {
+                "id": "q3",
+                "question": "¿Cuál es la diferencia técnica entre los métodos HTTP PUT y PATCH en una API REST?",
+                "options": [
+                  "PUT solo borra registros, mientras que PATCH los añade",
+                  "PUT sustituye completamente el recurso objetivo, mientras que PATCH aplica modificaciones parciales a los campos especificados",
+                  "PATCH bloquea el Event Loop del navegador de forma sincrónica",
+                  "No existe diferencia alguna en el estándar RFC"
+                ],
+                "correctIndex": 1,
+                "explanation": "PATCH aplica un conjunto de cambios parciales a un recurso existente, mientras que PUT requiere enviar la representación completa."
+              },
+              {
+                "id": "q4",
+                "question": "¿Por qué es fundamental el uso de operaciones asíncronas (async/await y Promises) al interactuar con servicios backend?",
+                "options": [
+                  "Evita bloquear el hilo principal de JavaScript, manteniendo la interfaz receptiva e interactiva mientras se esperan los datos",
+                  "Porque el navegador rechaza cualquier llamada de red que no sea bloqueante",
+                  "Para encriptar automáticamente todas las variables globales",
+                  "Porque convierte las llamadas JSON a ficheros de texto plano"
+                ],
+                "correctIndex": 0,
+                "explanation": "La asincronía en el Event Loop de JavaScript garantiza que la UI no se congele durante operaciones de I/O o peticiones de red."
+              },
+              {
+                "id": "q5",
+                "question": "Al actualizar el estado local en React tras una mutación exitosa en el backend, ¿qué principio debe seguirse?",
+                "options": [
+                  "Recargar obligatoriamente la página completa con location.reload()",
+                  "Actualizar el estado de forma inmutable creando nuevas referencias para disparar re-renderizados precisos",
+                  "Modificar directamente las propiedades del objeto de estado sin usar setState ni hooks",
+                  "Deshabilitar el Virtual DOM"
+                ],
+                "correctIndex": 1,
+                "explanation": "La inmutabilidad en el estado asegura que React detecte los cambios de referencia y actualice de manera eficiente y predecible la vista."
+              }
+            ]
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "userId": "user_student",
+          "email": "estudiante@dev.com",
+          "studentName": "Carlos Mendoza",
+          "avatar": "CM",
+          "rating": 5,
+          "comment": "Excelente curso, muy bien explicado y con material practico.",
+          "date": "Recientemente"
+        },
+        {
+          "studentName": "Sofía Valenzuela",
+          "avatar": "SV",
+          "rating": 5,
+          "date": "Hace 3 días",
+          "comment": "Excelente explicación paso a paso. Los proyectos y tareas son muy didácticos."
+        },
+        {
+          "studentName": "Marcos Herrera",
+          "avatar": "MH",
+          "rating": 5,
+          "date": "Hace 1 semana",
+          "comment": "El mejor curso que he tomado de esta temática. 100% recomendado."
+        },
+        {
+          "studentName": "Lucía Benítez",
+          "avatar": "LB",
+          "rating": 4.8,
+          "date": "Hace 2 semanas",
+          "comment": "Muy buen contenido, explicaciones claras y material descargable de alta calidad."
+        }
+      ]
+    },
+    {
+      "id": "course_uiux",
+      "title": "Diseño de Interfaces UI/UX & Sistemas de Diseño",
+      "category": "Diseño",
+      "level": "Principiante",
+      "rating": 4.8,
+      "reviewsCount": 98,
+      "price": 69.99,
+      "instructor": "Dra. Sofia Valenzuela",
+      "instructorAvatar": "SV",
+      "instructorBio": "Lead Product Designer especializada en sistemas de diseño y micro-interacciones.",
+      "image": "assets/images/course_uiux.png",
+      "description": "Domina las mejores prácticas de UX research, arquitectura de información y prototipado de alta fidelidad para aplicaciones web y móviles.",
+      "learningGoals": [
+        "Metodología Design Thinking aplicada",
+        "Creación de Design Systems escalables",
+        "Testeo de usabilidad con usuarios reales",
+        "Micro-interacciones y prototipado reactivo"
+      ],
+      "modules": [
+        {
+          "id": "mod_ui_01",
+          "title": "Módulo 1: Principios de Composición y Visual UX",
+          "lessons": [
+            {
+              "id": "les_ui_01",
+              "title": "1. Leyes de la Psicología Aplicadas al UI",
+              "duration": "15:30",
+              "videoUrl": "assets/videos/ui_ux_psychology.webm",
+              "fallbackMp4": "assets/videos/ui_ux_psychology.webm",
+              "resources": [
+                {
+                  "id": "res_ui_01",
+                  "name": "Guia_Leyes_UX_Figma.pdf",
+                  "type": "PDF",
+                  "size": "4.2 MB"
+                }
+              ]
+            }
+          ],
+          "quiz": {
+            "id": "quiz_ui_01",
+            "title": "Quiz de Fundamentos UI/UX y Psicología Visual",
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q_ui_1",
+                "question": "¿Qué establece la Ley de Fitts y cuál es su impacto directo en el diseño de interfaces?",
+                "options": [
+                  "El tiempo requerido para alcanzar un objetivo depende de la distancia y de su tamaño; los elementos clave deben ser amplios y de fácil acceso",
+                  "Los elementos visuales deben utilizar siempre colores saturados primarios",
+                  "La memoria a corto plazo no puede retener más de 2 palabras",
+                  "El contraste de color debe ser siempre 100% negro"
+                ],
+                "correctIndex": 0,
+                "explanation": "La Ley de Fitts demuestra que áreas táctiles y botones más grandes y accesibles reducen el tiempo y esfuerzo de interacción del usuario."
+              },
+              {
+                "id": "q_ui_2",
+                "question": "¿Cómo influye la Ley de Hick en el diseño de la navegación y menús de una aplicación?",
+                "options": [
+                  "El tiempo de toma de decisiones se incrementa logarítmicamente con el número de opciones; simplificar elecciones reduce la sobrecarga cognitiva",
+                  "Obliga a mostrar todas las subcategorías en una sola lista sin jerarquía",
+                  "Indica que los usuarios prefieren menús con más de 20 opciones visibles",
+                  "Exige animar cada botón con transiciones 3D"
+                ],
+                "correctIndex": 0,
+                "explanation": "La Ley de Hick demuestra que limitar las opciones directas o desglosar procesos en pasos guiados agiliza la toma de decisiones."
+              },
+              {
+                "id": "q_ui_3",
+                "question": "En un Sistema de Diseño (Design System), ¿qué rol cumple el espacio negativo o \"Whitespace\"?",
+                "options": [
+                  "Aporta claridad, define la jerarquía visual, mejora la legibilidad y separa grupos conceptuales de información",
+                  "Es un desperdicio de espacio que debe rellenarse con banners promocionales",
+                  "Se utiliza exclusivamente para ocultar botones secundarios",
+                  "Sirve para aumentar la velocidad de descarga del servidor"
+                ],
+                "correctIndex": 0,
+                "explanation": "El espacio en blanco intencional guía la mirada del usuario, reduce el ruido visual y estructura armónicamente los componentes."
+              }
+            ]
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "studentName": "Sofía Valenzuela",
+          "avatar": "SV",
+          "rating": 5,
+          "date": "Hace 3 días",
+          "comment": "Excelente explicación paso a paso. Los proyectos y tareas son muy didácticos."
+        },
+        {
+          "studentName": "Marcos Herrera",
+          "avatar": "MH",
+          "rating": 5,
+          "date": "Hace 1 semana",
+          "comment": "El mejor curso que he tomado de esta temática. 100% recomendado."
+        },
+        {
+          "studentName": "Lucía Benítez",
+          "avatar": "LB",
+          "rating": 4.8,
+          "date": "Hace 2 semanas",
+          "comment": "Muy buen contenido, explicaciones claras y material descargable de alta calidad."
+        }
+      ]
+    },
+    {
+      "id": "course_ai",
+      "title": "Inteligencia Artificial y Machine Learning Aplicado",
+      "category": "IA & Ciencia de Datos",
+      "level": "Avanzado",
+      "rating": 4.95,
+      "reviewsCount": 210,
+      "price": 119.99,
+      "instructor": "Dr. Alejandro Silva",
+      "instructorAvatar": "AS",
+      "instructorBio": "Investigador en IA y Doctor en Machine Learning por el MIT.",
+      "image": "assets/images/course_ai.png",
+      "description": "Construye y despliega modelos de aprendizaje profundo, redes neuronales y sistemas de IA generativa con Python, PyTorch y transformers.",
+      "learningGoals": [
+        "Redes neuronales convolucionales y recurrentes",
+        "Fine-tuning de LLMs y modelos de difusión",
+        "Optimizadores y funciones de pérdida",
+        "Despliegue de modelos en tiempo real"
+      ],
+      "modules": [
+        {
+          "id": "mod_ai_01",
+          "title": "Módulo 1: Redes Neuronales Profundas",
+          "lessons": [
+            {
+              "id": "les_ai_01",
+              "title": "1. Fundamentos Matemáticos y Backpropagation",
+              "duration": "25:10",
+              "videoUrl": "assets/videos/neural_network_math.webm",
+              "fallbackMp4": "assets/videos/neural_network_math.webm",
+              "resources": [
+                {
+                  "id": "res_ai_01",
+                  "name": "Python_Notebook_NeuralNet.ipynb",
+                  "type": "CODE",
+                  "size": "1.5 MB"
+                }
+              ]
+            }
+          ],
+          "quiz": {
+            "id": "quiz_ai_01",
+            "title": "Quiz: Redes Neuronales Profundas & Backpropagation",
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q_ai_1",
+                "question": "¿Cuál es el rol matemático del algoritmo de Backpropagation en una red neuronal?",
+                "options": [
+                  "Calcular el gradiente de la función de pérdida con respecto a cada peso usando la regla de la cadena para actualizar los parámetros",
+                  "Aumentar linealmente el número de nodos en la capa de entrada",
+                  "Convertir datos binarios a formato texto sin procesar",
+                  "Comprimir los archivos de entrenamiento en formato ZIP"
+                ],
+                "correctIndex": 0,
+                "explanation": "Backpropagation propaga el error desde la capa de salida hacia las capas iniciales, calculando derivadas parciales para optimizar los pesos."
+              },
+              {
+                "id": "q_ai_2",
+                "question": "¿Por qué es indispensable incorporar funciones de activación no lineales (como ReLU o Sigmoid)?",
+                "options": [
+                  "Porque sin no-linealidad, una red profunda colapsaría matemáticamente a una simple transformación afín lineal incapaz de modelar problemas complejos",
+                  "Para evitar que los valores de salida sean números reales",
+                  "Porque aceleran la descarga de datasets desde internet",
+                  "Para restringir el entrenamiento a procesadores de un solo núcleo"
+                ],
+                "correctIndex": 0,
+                "explanation": "Las funciones de activación no lineales permiten que la red neuronal aprenda representaciones complejas y fronteras de decisión no lineales."
+              },
+              {
+                "id": "q_ai_3",
+                "question": "En el optimizador Gradient Descent, ¿qué consecuencia provoca configurar una tasa de aprendizaje (Learning Rate) excesivamente alta?",
+                "options": [
+                  "Puede hacer que el modelo oscile descontroladamente, diverja o sobrepase el mínimo de la función de pérdida sin converger",
+                  "Garantiza alcanzar el mínimo global en una sola iteración",
+                  "Provoca que el entrenamiento se vuelva infinitamente lento",
+                  "Elimina automáticamente el sobreajuste (overfitting)"
+                ],
+                "correctIndex": 0,
+                "explanation": "Un learning rate demasiado elevado genera saltos de gradiente excesivos, impidiendo la convergencia e incluso provocando divergencia en la pérdida."
+              }
+            ]
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "studentName": "Sofía Valenzuela",
+          "avatar": "SV",
+          "rating": 5,
+          "date": "Hace 3 días",
+          "comment": "Excelente explicación paso a paso. Los proyectos y tareas son muy didácticos."
+        },
+        {
+          "studentName": "Marcos Herrera",
+          "avatar": "MH",
+          "rating": 5,
+          "date": "Hace 1 semana",
+          "comment": "El mejor curso que he tomado de esta temática. 100% recomendado."
+        },
+        {
+          "studentName": "Lucía Benítez",
+          "avatar": "LB",
+          "rating": 4.8,
+          "date": "Hace 2 semanas",
+          "comment": "Muy buen contenido, explicaciones claras y material descargable de alta calidad."
+        }
+      ]
+    },
+    {
+      "id": "course_marketing",
+      "title": "Digital Growth Marketing & Analítica SaaS",
+      "category": "Negocios",
+      "level": "Intermedio",
+      "rating": 4.75,
+      "reviewsCount": 84,
+      "price": 49.99,
+      "instructor": "Lic. Mariana Gomez",
+      "instructorAvatar": "MG",
+      "instructorBio": "Growth Hacker en startups unicornio con enfoque en adquisición y retención.",
+      "image": "assets/images/course_marketing.png",
+      "description": "Estrategias aceleradas de adquisición de usuarios, optimización de embudos de conversión y retención en plataformas SaaS.",
+      "learningGoals": [
+        "Optimización de embudos AARRR",
+        "Experimentación A/B Testing rigurosa",
+        "Atribución multi-canal y métricas de LTV/CAC",
+        "Automatización de marketing con CRM"
+      ],
+      "modules": [
+        {
+          "id": "mod_mkt_01",
+          "title": "Módulo 1: Métricas Clave de Crecimiento",
+          "lessons": [
+            {
+              "id": "les_mkt_01",
+              "title": "1. Cálculo y Optimización del LTV vs CAC",
+              "duration": "14:20",
+              "videoUrl": "assets/videos/saas_growth_analytics.webm",
+              "fallbackMp4": "assets/videos/saas_growth_analytics.webm",
+              "resources": [
+                {
+                  "id": "res_mkt_01",
+                  "name": "Calculadora_SaaS_LTV_CAC.xlsx",
+                  "type": "XLSX",
+                  "size": "850 KB"
+                }
+              ]
+            }
+          ],
+          "quiz": {
+            "id": "quiz_mkt_01",
+            "title": "Quiz de Analítica SaaS y Métricas de Crecimiento",
+            "passingScore": 75,
+            "questions": [
+              {
+                "id": "q_mkt_1",
+                "question": "¿Qué ratio LTV / CAC se considera saludable y sostenible para una empresa SaaS en fase de escalamiento?",
+                "options": [
+                  "1:1 (el costo de adquirir el cliente equivale a su valor total)",
+                  "3:1 o superior (el valor de vida del cliente triplica el costo de adquisición)",
+                  "0.5:1 (gastar el doble en marketing de lo que genera el cliente)",
+                  "0:0 (sin medición de retorno)"
+                ],
+                "correctIndex": 1,
+                "explanation": "Un ratio LTV/CAC de 3:1 o más asegura un margen operativo saludable para cubrir costos fijos, I+D y reinvertir rentablemente en adquisición."
+              },
+              {
+                "id": "q_mkt_2",
+                "question": "¿Cómo afecta directamente la tasa de cancelación (Churn Rate) al Lifetime Value (LTV)?",
+                "options": [
+                  "A menor churn rate, mayor retención y tiempo de vida del cliente, lo que incrementa exponencialmente el LTV",
+                  "El churn rate no influye en las métricas de ingresos recurrentes",
+                  "Un churn elevado incrementa la fidelidad de los clientes existentes",
+                  "Solo impacta a los usuarios con planes gratuitos"
+                ],
+                "correctIndex": 0,
+                "explanation": "El LTV es inversamente proporcional al Churn. Reducir el abandono alarga la vida útil del suscriptor e incrementa los ingresos generados."
+              },
+              {
+                "id": "q_mkt_3",
+                "question": "En el marco de embudo pirata (AARRR), ¿qué representa la fase de Activación (Activation)?",
+                "options": [
+                  "El momento en que el usuario experimenta por primera vez el valor central del producto (\"Aha! Moment\")",
+                  "El envío de la primera factura tributaria al cliente",
+                  "La visita casual a la página de inicio desde un anuncio",
+                  "El cierre definitivo de la cuenta del usuario"
+                ],
+                "correctIndex": 0,
+                "explanation": "La Activación mide cuándo el usuario recién registrado obtiene un primer resultado exitoso y percibe el valor real de la solución."
+              }
+            ]
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "studentName": "Sofía Valenzuela",
+          "avatar": "SV",
+          "rating": 5,
+          "date": "Hace 3 días",
+          "comment": "Excelente explicación paso a paso. Los proyectos y tareas son muy didácticos."
+        },
+        {
+          "studentName": "Marcos Herrera",
+          "avatar": "MH",
+          "rating": 5,
+          "date": "Hace 1 semana",
+          "comment": "El mejor curso que he tomado de esta temática. 100% recomendado."
+        },
+        {
+          "studentName": "Lucía Benítez",
+          "avatar": "LB",
+          "rating": 4.8,
+          "date": "Hace 2 semanas",
+          "comment": "Muy buen contenido, explicaciones claras y material descargable de alta calidad."
+        }
+      ]
+    }
+  ],
+  "subscriptionPlans": [
+    {
+      "id": "plan_basic",
+      "name": "Plan Estudiante",
+      "priceMonthly": 14.99,
+      "priceAnnual": 119.99,
+      "badge": "Popular",
+      "features": [
+        "Acceso a 5 cursos básicos",
+        "Streaming HD adaptativo",
+        "Recursos descargables",
+        "Certificados digitales"
+      ]
+    },
+    {
+      "id": "plan_pro",
+      "name": "Pase Pro Ilimitado",
+      "priceMonthly": 29.99,
+      "priceAnnual": 249.99,
+      "badge": "Recomendado",
+      "popular": true,
+      "features": [
+        "Acceso ILIMITADO a todos los cursos",
+        "Streaming 4K HLS Ultra Rápido",
+        "Generador de Certificados PDF Oficiales",
+        "Asesoría en Foro Q&A Prioritario",
+        "Acceso a códigos fuente y proyectos"
+      ]
+    },
+    {
+      "id": "plan_enterprise",
+      "name": "Membresía Empresarial",
+      "priceMonthly": 89.99,
+      "priceAnnual": 799.99,
+      "badge": "Equipos",
+      "features": [
+        "Hasta 10 licencias de estudiantes",
+        "Panel de Control para Administradores",
+        "Reportes de Analítica Avanzados",
+        "Soporte 24/7 y Mentorías 1 a 1"
+      ]
+    }
+  ],
+  "coupons": [
+    {
+      "code": "LAUNCH50",
+      "discountPercent": 50,
+      "expiryDate": "2026-12-31",
+      "usesRemaining": 150
+    },
+    {
+      "code": "EDTECH100",
+      "discountPercent": 100,
+      "expiryDate": "2026-11-30",
+      "usesRemaining": 25
+    },
+    {
+      "code": "SUMMER30",
+      "discountPercent": 30,
+      "expiryDate": "2026-10-31",
+      "usesRemaining": 500
+    }
+  ],
+  "enrolledStudents": [
+    {
+      "id": "st_101",
+      "name": "Ana Garcia",
+      "email": "ana.garcia@gmail.com",
+      "courseId": "course_webdev",
+      "status": "Active",
+      "enrolledAt": "2026-09-12"
+    },
+    {
+      "id": "st_102",
+      "name": "Luis Fernando Ruiz",
+      "email": "luis.ruiz@hotmail.com",
+      "courseId": "course_webdev",
+      "status": "Active",
+      "enrolledAt": "2026-09-18"
+    },
+    {
+      "id": "st_103",
+      "name": "Elena Torres",
+      "email": "elena.t@techcorp.io",
+      "courseId": "course_uiux",
+      "status": "Revoked",
+      "enrolledAt": "2026-08-05"
+    },
+    {
+      "id": "st_104",
+      "name": "Carlos Mendoza",
+      "email": "estudiante@dev.com",
+      "courseId": "course_webdev",
+      "status": "Active",
+      "enrolledAt": "2026-10-01"
+    }
+  ],
+  "discussions": {
+    "les_001": [
+      {
+        "id": "disc_1",
+        "author": "Ana Garcia",
+        "avatar": "AG",
+        "date": "Hace 2 días",
+        "text": "¿Es recomendable usar Server-Side Rendering (SSR) desde la primera fase del proyecto?",
+        "likes": 5,
+        "replies": [
+          {
+            "author": "Ing. Mateo Rossi",
+            "isInstructor": true,
+            "avatar": "MR",
+            "date": "Hace 1 día",
+            "text": "Excelente pregunta Ana. Para SEO e e-commerce SSR es ideal, mientras que para dashboards privados la arquitectura SPA o SSR híbrida suele ser más simple."
+          }
+        ]
+      }
+    ]
+  },
+  "analytics": {
+    "totalRevenue": 14850,
+    "activeSubscribers": 342,
+    "completionRateAvg": 78.4,
+    "highestDropoffLessons": [
+      {
+        "lessonTitle": "2. Configuración del Entorno de Desarrollo",
+        "course": "Desarrollo Web Fullstack",
+        "dropoffRate": "24.5%"
+      },
+      {
+        "lessonTitle": "1. Fundamentos Matemáticos y Backpropagation",
+        "course": "IA & Machine Learning",
+        "dropoffRate": "31.2%"
+      },
+      {
+        "lessonTitle": "1. Cálculo y Optimización del LTV vs CAC",
+        "course": "Digital Growth Marketing",
+        "dropoffRate": "18.7%"
+      }
+    ],
+    "salesHistory": [
+      {
+        "month": "Mayo",
+        "sales": 1200
+      },
+      {
+        "month": "Junio",
+        "sales": 1900
+      },
+      {
+        "month": "Julio",
+        "sales": 2400
+      },
+      {
+        "month": "Agosto",
+        "sales": 3100
+      },
+      {
+        "month": "Septiembre",
+        "sales": 4200
+      },
+      {
+        "month": "Octubre",
+        "sales": 5150
+      }
+    ],
+    "completionDistribution": [
+      145,
+      120,
+      62,
+      15
+    ]
+  },
+  "certificates": []
+}

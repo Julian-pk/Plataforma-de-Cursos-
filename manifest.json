@@ -1,0 +1,16 @@
+{
+  "name": "Plataforma de Cursos Online y Membresías (LMS / EdTech)",
+  "short_name": "EdTechStudio",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#6366f1",
+  "description": "Plataforma educativa para alojar, vender y gestionar cursos en línea con streaming HLS, certificados PDF y analítica.",
+  "icons": [
+    {
+      "src": "assets/images/course_webdev.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

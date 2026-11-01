@@ -1,0 +1,24 @@
+{
+  "name": "plataforma-de-cursos-online-y-membresias",
+  "version": "1.0.0",
+  "description": "Plataforma LMS EdTech para venta, gestión y consumo de cursos online y suscripciones con streaming HLS, certificaciones PDF y app Android.",
+  "main": "server.py",
+  "scripts": {
+    "start": "python server.py",
+    "dev": "python -m http.server 3000",
+    "test": "python check_syntax.py"
+  },
+  "keywords": [
+    "lms",
+    "edtech",
+    "cursos-online",
+    "membresias",
+    "hls-streaming",
+    "jspdf",
+    "chartjs",
+    "android-webview",
+    "pwa"
+  ],
+  "author": "Julian Tobar",
+  "license": "MIT"
+}

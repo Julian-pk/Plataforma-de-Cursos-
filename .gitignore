@@ -1,0 +1,29 @@
+# ==========================================
+# Archivos de Compilación de Android y Gradle
+# ==========================================
+.gradle/
+build/
+app/build/
+**/build/
+*.apk
+*.aab
+local.properties
+
+# ==========================================
+# Configuración de IDEs y Editores Locales
+# ==========================================
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+*.log
+
+# ==========================================
+# Python & Entornos Temporales
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/

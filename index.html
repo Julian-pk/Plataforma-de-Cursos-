@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Plataforma de Cursos Online y Membresías | EdTech LMS Studio</title>
+  
+  <meta name="description" content="Plataforma de cursos online y membresías LMS para alojar, vender y gestionar educación digital con streaming adaptativo HLS, certificados automáticos en PDF y analítica avanzada.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- HLS.js Video Engine -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+  <!-- Chart.js for Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- jsPDF & html2canvas for PDF Certificates -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Application Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- PWA Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Header -->
+  <header class="header">
+    <div class="logo-container" onclick="navigate('catalog')">
+      <div class="logo-badge">
+        <i data-lucide="graduation-cap"></i>
+      </div>
+      <span>EdTech<span style="color:var(--accent-secondary);">Studio</span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <button class="nav-btn active" data-view="catalog" onclick="navigate('catalog')">
+        <i data-lucide="layout-grid"></i> Catálogo
+      </button>
+      <button class="nav-btn" data-view="student-dashboard" onclick="navigate('student-dashboard')">
+        <i data-lucide="book-open"></i> Mis Cursos
+      </button>
+      <button id="nav-studio-btn" class="nav-btn" data-view="instructor-dashboard" onclick="navigate('instructor-dashboard')" style="display: none;">
+        <i data-lucide="layout-dashboard"></i> Studio / Panel Admin
+      </button>
+      <button id="nav-mobile-logout-btn" class="nav-btn nav-btn-logout-mobile" onclick="handleLogout()" title="Cerrar Sesión" style="display: none;">
+        <i data-lucide="log-out" style="width:15px; height:15px;"></i> Salir
+      </button>
+    </nav>
+
+    <!-- Header Actions (Theme Toggle, Network Sync Badge, Profile & Logout) -->
+    <div class="header-actions">
+      <!-- Network Sync Status Indicator Badge -->
+      <button id="network-sync-status-badge" class="badge badge-green" onclick="openNetworkSyncModal()" title="Sincronización Multi-dispositivo (PC & Teléfono Móvil)" style="cursor:pointer; display:flex; align-items:center; gap:0.35rem; padding:0.35rem 0.65rem; font-size:0.75rem; border:none; flex-shrink:1;">
+        <span style="color:#22c55e;">●</span> <span class="sync-text-full">En Red: 192.168.0.120:3000</span><span class="sync-text-mobile">En Red</span>
+      </button>
+
+      <button class="mode-toggle" onclick="toggleTheme()" title="Cambiar Tema (Oscuro / Claro)">
+        <i id="theme-icon" data-lucide="sun"></i>
+      </button>
+
+      <div id="header-user-menu" class="user-profile-menu" style="display: none;">
+        <div id="header-user-avatar" class="avatar">CM</div>
+        <div class="user-info-text" style="display:flex; flex-direction:column; align-items:flex-start;">
+          <span id="header-user-name" style="font-size:0.8rem; font-weight:600; line-height:1.2; max-width:80px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">Carlos</span>
+          <span id="header-role-badge" class="user-role-badge">Estudiante</span>
+        </div>
+        <button onclick="handleLogout()" class="btn-logout-header" title="Cerrar Sesión">
+          <i data-lucide="log-out" style="width:14px; height:14px;"></i>
+          <span>Salir</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main SPA View Mount Container -->
+  <main id="main-container" class="main-content">
+    <!-- Dynamic views will render here via app.js -->
+  </main>
+
+  <!-- Global Modal Window Container -->
+  <div id="global-modal-overlay" class="modal-overlay">
+    <div id="global-modal-card" class="modal-card">
+      <!-- Modal content renders here dynamically -->
+    </div>
+  </div>
+
+  <!-- Application Logic Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/hls-player.js"></script>
+  <script src="js/certificate.js"></script>
+  <script src="js/drag-drop-builder.js"></script>
+  <script src="js/analytics-charts.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
